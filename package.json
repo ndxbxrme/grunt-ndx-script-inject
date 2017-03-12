@@ -1,6 +1,6 @@
 {
   "name": "grunt-ndx-script-inject",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "script injector for ndx-framework apps",
   "main": "tasks/ndx-script-inject.js",
   "scripts": {
@@ -24,9 +24,6 @@
   },
   "dependencies": {
     "async": "^2.1.5",
-    "cheerio": "^0.22.0",
-    "extend-grunt-plugin": "^0.1.0",
-    "grunt-injector": "^1.1.0",
-    "grunt-wiredep": "^3.0.1"
+    "cheerio": "^0.22.0"
   }
 }
