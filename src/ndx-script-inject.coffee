@@ -20,6 +20,10 @@ module.exports = (grunt) ->
           $('body').append('  <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>\n  ');
         $('body').append('  <!-- bower:js -->\n    <!-- endbower -->\n    ');
         $('body').append('<!-- injector:js -->\n    <!-- endinjector -->\n  ');
+        delayedScripts = $('script[delay="true"]')
+        for delayedScript in delayedScripts
+          $(delayedScript).remove()
+          $('body').append delayedScript
         fs.writeFile filePath, $.html(), 'utf-8', ->
         setTimeout ->
           grunt.task.run ['wiredep', 'injector']
