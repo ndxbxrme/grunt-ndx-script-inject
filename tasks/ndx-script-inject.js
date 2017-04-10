@@ -29,6 +29,7 @@
             $('body').append('  <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>\n  ');
           }
           $('body').append('  <!-- bower:js -->\n    <!-- endbower -->\n    ');
+          $('body').append('  <script>angular.module("ndx", []);</script>\n    ');
           $('body').append('<!-- injector:js -->\n    <!-- endinjector -->\n  ');
           delayedScripts = $('script[delay="true"]');
           for (i = 0, len = delayedScripts.length; i < len; i++) {
