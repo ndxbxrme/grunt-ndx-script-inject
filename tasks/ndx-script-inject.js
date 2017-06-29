@@ -28,6 +28,17 @@
           if (options.sockets) {
             $('body').append('  <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>\n  ');
           }
+          if (options.bower) {
+            if (options.bower.dependencies['ndx-socket']) {
+              $('body').append('  <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>\n  ');
+            }
+          }
+          if (options.pkg) {
+            if (options.pkg.dependencies['ndx-brand']) {
+              $('head').append('  <link rel="stylesheet" href="brand.css">\n  ');
+              $('body').append('  <script src="brand.js"></script>\n  ');
+            }
+          }
           $('body').append('  <!-- bower:js -->\n    <!-- endbower -->\n    ');
           $('body').append('<!-- injector:js -->\n    <!-- endinjector -->\n  ');
           delayedScripts = $('script[delay="true"]');
