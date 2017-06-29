@@ -1,6 +1,6 @@
 {
   "name": "grunt-ndx-script-inject",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "script injector for ndx-framework apps",
   "main": "tasks/ndx-script-inject.js",
   "scripts": {

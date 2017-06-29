@@ -25,6 +25,8 @@
           $ = cheerio.load(html);
           $('head').append('  <!-- bower:css -->\n    <!-- endbower -->\n    ');
           $('head').append('<!-- injector:css -->\n    <!-- endinjector -->\n  ');
+          $('body').append('  <!-- bower:js -->\n    <!-- endbower -->\n    ');
+          $('body').append('<!-- injector:js -->\n    <!-- endinjector -->\n  ');
           if (options.sockets) {
             $('body').append('  <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>\n  ');
           }
@@ -39,8 +41,6 @@
               $('body').append('  <script src="brand.js"></script>\n  ');
             }
           }
-          $('body').append('  <!-- bower:js -->\n    <!-- endbower -->\n    ');
-          $('body').append('<!-- injector:js -->\n    <!-- endinjector -->\n  ');
           delayedScripts = $('script[delay="true"]');
           for (i = 0, len = delayedScripts.length; i < len; i++) {
             delayedScript = delayedScripts[i];
